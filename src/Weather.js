@@ -131,5 +131,5 @@ export default function Weather(props) {
     search();
     
   }
-  <div>T</div>
+  ;
 }
