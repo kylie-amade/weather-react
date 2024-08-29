@@ -1,0 +1,103 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.weatherPage{
+  max-width:600px;
+  border: 2px solid rgb(232, 232, 241);
+  border-radius: 15px;
+  margin:0 auto;
+  background-image: url('./background.jpg');
+  color:white;
+  background-size: cover; /* Cover the entire page */
+  background-repeat: no-repeat; 
+  height: 100vh;
+  transition:100ms,
+}
+ul{
+  list-style: none;
+}
+.today{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.cityName{
+  font-weight: 100px;
+  text-align: left;
+  margin-left: 40px;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+}
+.formControl{
+  width:450px;
+  height:50px;
+  border-radius: 5px;
+  margin-top: 8px;
+  border: 2px solid rgb(223, 223, 228);
+  margin-left: 10px;
+}
+.button{
+  margin-top: 8px;
+  height: 50px;
+  width: 100px;
+  background-color: rgb(55, 82, 238);
+  border: 1px solid rgb(55, 82, 238);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; 
+}
+form{
+  margin-bottom: 80px;
+}
+input[type="search"]:focus {
+  border-color: #0056b3; /* Darker blue on focus */
+}
+.button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+.icon canvas {
+  margin-right: 60px;
+  width:130px;
+  margin-bottom: 40px;
+            
+
+}
+p{
+  font-weight: 900px;
+}
