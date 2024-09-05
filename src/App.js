@@ -8,9 +8,7 @@ function App() {
       <Weather defaultCity="New York" />
       <div>
         This project was coded by{" "}
-        <a href="https://phenomenal-marshmallow-19943a.netlify.app/">
-          Kylie Amade
-        </a>{" "}
+        <a href="https://famous-sprinkles-6ad026.netlify.app/">Kylie Amade</a>{" "}
         view it{" "}
         <a href="https://github.com/kylie-amade/weather-react"> here </a>.
       </div>
