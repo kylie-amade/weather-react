@@ -41,7 +41,7 @@
   border: 2px solid rgb(232, 232, 241);
   border-radius: 15px;
   margin:0 auto;
-  background-image: url('./background.jpg');
+   background-image: linear-gradient(-20deg, #b380ca 0%, #62defa 100%);
   color:white;
   background-size: cover; /* Cover the entire page */
   background-repeat: no-repeat; 
@@ -75,15 +75,12 @@ ul{
   margin-top: 8px;
   height: 50px;
   width: 100px;
-  background-color: rgb(55, 82, 238);
-  border: 1px solid rgb(55, 82, 238);
+  background-color: rgb(98, 117, 226);
+  border: 1px solid rgb(98, 117, 226);
   border-radius: 5px;
   color: white;
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s; 
-}
-form{
-  margin-bottom: 80px;
 }
 input[type="search"]:focus {
   border-color: #0056b3; /* Darker blue on focus */
@@ -91,13 +88,46 @@ input[type="search"]:focus {
 .button:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
-.icon canvas {
-  margin-right: 60px;
-  width:130px;
-  margin-bottom: 40px;
-            
-
-}
 p{
   font-weight: 900px;
 }
+form{
+  margin-bottom: 20px;
+}
+.col{
+  margin-bottom: 30px;
+}
+.icon{
+  margin-right: 15px;
+  
+  
+}
+.card{
+  width:80px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  text-align:center;
+  height:90px;
+  border-radius:300px;
+  
+}
+.card {
+    background-color: rgba(255, 255, 255, 0.4); /* White background with 80% opacity */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(245, 243, 243, 0.2); /* Subtle shadow */
+    transition: transform 0.3s; /* Smooth scaling on hover */
+}
+.card li{
+  margin-right: 15px;
+  font-size: smaller;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.str{
+  color:rgb(104, 98, 98);
+}
+
+

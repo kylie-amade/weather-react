@@ -3,6 +3,7 @@ import axios from "axios";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import  WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -12,6 +13,7 @@ export default function Weather(props) {
     console.log(response);
     setWeatherData({
       ready: true,
+      coordinates:response.data.coord,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -22,8 +24,8 @@ export default function Weather(props) {
     });
   }
   function search(){
-    let apiKey = "210d99196a88b9257ed8cb3535a0a0c5";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    let apiKey = "c5f0e59acac64258bb92ed027d20c68f";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showTemperature);
 
 
@@ -63,72 +65,29 @@ export default function Weather(props) {
               <li className="thursday">
                 <FormattedDate date={weatherData.date} />
                 <span>
-                  <strong>Temperature : </strong>{" "}
-                 <WeatherTemperature ture = {Math.round(weatherData.temperature)}/>
+                  <strong>Temperature : </strong>{" "}<WeatherTemperature ture = {Math.round(weatherData.temperature)}/>
                 </span>
               </li>
               <li>
-                <strong>Humidity :</strong> {weatherData.humidity} %
+                <strong>Humidity : </strong> {weatherData.humidity} %
               </li>
               <li>
-                <strong>Wind : </strong>
+                <strong>Wind :  </strong>
                 {Math.round(weatherData.wind)} km/h
               </li>
             </ul>
           </div>
           <div className="icon">
             <p>{weatherData.description} </p>{" "}
-            <WeatherIcon code={weatherData.icon} />
+            <WeatherIcon code={weatherData.icon} size={80} />
           </div>
         </div>
-        <div className="row">
-          <div className="col-2">
-            <ul>
-              <h5>Mon</h5>
-              <li>🌤️</li>
-              <li> 24° 15° </li>
-            </ul>
-          </div>
-          <div className="col-2">
-            <ul>
-              <h5>Wed</h5>
-              <li>🌤️</li>
-              <li>24° 15°</li>
-            </ul>
-          </div>
-          <div className="col-2">
-            <ul>
-              <h5>Thu</h5>
-              <li>🌤️</li>
-              <li>24° 15°</li>
-            </ul>
-          </div>
-          <div className="col-2">
-            <ul>
-              <h5>Fri</h5>
-              <li>🌤️</li>
-              <li>24° 15°</li>
-            </ul>
-          </div>
-          <div className="col-2">
-            <ul>
-              <h5>Sart</h5>
-              <li>🌤️</li>
-              <li>24° 15°</li>
-            </ul>
-          </div>
-          <div className="col-2">
-            <ul>
-              <h5>Sun</h5>
-              <li>🌤️</li>
-              <li>24° 15°</li>
-            </ul>
-          </div>
-        </div>
+        <WeatherForecast coordinates={weatherData.coordinates}/>
       </div>
     );
   } else {
     search();
+    return null;
     
   }
   ;
