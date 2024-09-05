@@ -65,14 +65,17 @@ export default function Weather(props) {
               <li className="thursday">
                 <FormattedDate date={weatherData.date} />
                 <span>
-                  <strong>Temperature : </strong>{" "}<WeatherTemperature ture = {Math.round(weatherData.temperature)}/>
+                  <strong>Temperature : </strong>{" "}
+                  <WeatherTemperature
+                    ture={Math.round(weatherData.temperature)}
+                  />
                 </span>
               </li>
               <li>
                 <strong>Humidity : </strong> {weatherData.humidity} %
               </li>
               <li>
-                <strong>Wind :  </strong>
+                <strong>Wind : </strong>
                 {Math.round(weatherData.wind)} km/h
               </li>
             </ul>
@@ -82,7 +85,13 @@ export default function Weather(props) {
             <WeatherIcon code={weatherData.icon} size={80} />
           </div>
         </div>
-        <WeatherForecast coordinates={weatherData.coordinates}/>
+        <WeatherForecast coordinates={weatherData.coordinates} />
+        <div>
+          This project was coded by{" "}
+          <a href="https://famous-sprinkles-6ad026.netlify.app/">Kylie Amade</a>{" "}
+          view it{" "}
+          <a href="https://github.com/kylie-amade/weather-react"> here </a>.
+        </div>
       </div>
     );
   } else {

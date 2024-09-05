@@ -41,11 +41,9 @@
   border: 2px solid rgb(232, 232, 241);
   border-radius: 15px;
   margin:0 auto;
-   background-image: linear-gradient(-20deg, #b380ca 0%, #62defa 100%);
+  background-image: linear-gradient(-20deg, #b380ca 0%, #62defa 100%);
   color:white;
   background-size: cover; /* Cover the entire page */
-  background-repeat: no-repeat; 
-  height: 100vh;
   transition:100ms,
 }
 ul{
